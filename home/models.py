@@ -32,3 +32,11 @@ class UserRoleMapping(BaseModel):
 
     def __str__(self):
         return f"{self.user.username} - {self.role.name}"
+    
+    
+class JobRequiredForm(BaseModel):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    job_name = models.CharField(max_length=255)
+    job_address = models.TextField(null=True, blank=True)
+    job_role = models.CharField(max_length=255)
+    salary_range = models.CharField( max_length=255,null=True, blank=True)
