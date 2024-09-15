@@ -11,5 +11,6 @@ urlpatterns = [
     
     
     path('home/', HomeView.as_view(), name='home'),
+    path('about/', HomeView.as_view(), name='home'),
 
 ]
